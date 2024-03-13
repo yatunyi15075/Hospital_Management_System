@@ -1,9 +1,9 @@
 import React from 'react'
 
-const OperationReporstPage = () => {
+const OperationReportsPage = () => {
   return (
     <div>OperationReporstPage</div>
   )
 }
 
-export default OperationReporstPage
+export default OperationReportsPage

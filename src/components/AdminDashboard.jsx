@@ -9,9 +9,12 @@ import ManageAccountantsPage from '../pages/ManageAccountantsPage';
 import ManagePharmacistsPage from '../pages/ManagePharmacistsPage';
 import ManageReceptionistsPage from '../pages/ManageReceptionistsPage';
 import ManageDepartmentsPage from '../pages/ManageDepartmentsPage';
-import OperationReportsPage from '../pages/OperationReportsPage';
+// import OperationReportsPage from '../pages/OperationReportsPage';
 import ViewAppointmentsPage from '../pages/ViewAppointmentsPage';
 import ChangeProfilePage from '../pages/ChangeProfilePage';
+import OperationReportsPage from '../pages/OperationReporstPage';
+
+
 
 const AdminDashboard = () => {
   const { path, url } = useRouteMatch();
