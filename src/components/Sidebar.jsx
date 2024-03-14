@@ -1,13 +1,13 @@
-import React from 'react';
+// import React from 'react';
 
-const Sidebar = () =>{
-    return(
-    <aside>
-        <nav>
-            {/*Sidebar navigation links */}
-        </nav>
-    </aside>
-    );
-};
+// const Sidebar = () =>{
+//     return(
+//     <aside>
+//         <nav>
+//             {/*Sidebar navigation links */}
+//         </nav>
+//     </aside>
+//     );
+// };
 
-export default Sidebar;
+// export default Sidebar;
