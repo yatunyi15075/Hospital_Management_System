@@ -1,25 +1,18 @@
 import React from 'react';
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ManageDoctorsPage from '../pages/ManageDoctorsPage';
+import Dashboard from '../pages/Dashboard';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 const App = () => {
   return (
-    <div>Hello Dashboard</div>
+    <Router>
+          <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/manageDoctorsPage" element={<ManageDoctorsPage />} />
+          </Routes>
 
-    // <Router>
-    //   <AppContainer>
-    //     <Navbar />
-    //     <ContentContainer>
-    //       <Routes>
-    //         <Route path="/" element={<HomePage />} />
-    //         <Route path="/projects" element={<Projects />} />
-    //         <Route path="/technologies" element={<Technologies />} />
-    //         <Route path="/about" element={<About />} />
-    //       </Routes>
-    //     </ContentContainer>
-    //     <Footer />
-    //   </AppContainer>
-    // </Router>
+    </Router>
   );
 }
 
