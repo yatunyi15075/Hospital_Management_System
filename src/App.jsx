@@ -1,25 +1,37 @@
-// src/App.js
+import AdminDashboard from './components/AdminDashboard';
+
+
+// const App = () => {
+//   return (
+//     <div>
+//       <AdminDashboard />
+      
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+// check This code at home
+
 
 import React from 'react';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AdminDashboard from './components/AdminDashboard';
-// import DashboardHeader from './components/DashboardHeader';
-// import Sidebar from './components/Sidebar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/DashboardHeader';
+import Sidebar from './components/Sidebar';
+import ManageDoctorsPage from './pages/ManageDoctorsPage';
 
 const App = () => {
   return (
-
-    <div><AdminDashboard /></div>
-    // <Router>
-    //   <Switch>
-    //     <Route path="/admin">
-    //       <AdminDashboard />
-    //     </Route>
-    //     {/* Other routes for different user dashboards */}
-    //   </Switch>
-    // </Router>
-
+    <Router>
+      <Header />
+      <div className="container">
+        <Sidebar />
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
+

@@ -6,4 +6,4 @@ const ChangeProfilePage = () =>{
     );
 };
 
-export default ChangeProfilePage;
+export default ChangeProfilePage; 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ManageDoctorsPage = () =>{
     return(
-    <div>Hello</div>
+    <div>Hello OnDEKO</div>
     );
 };
 

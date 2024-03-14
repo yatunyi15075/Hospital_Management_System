@@ -1,13 +1,12 @@
 import React from 'react';
 // import DashboardHeader from '../components/DashboardHeader';
-// import Sidebar from '../components/Sidebar';
+import Sidebar from '../components/Sidebar';
+import Header from '../components/DashboardHeader';
 
 const Dashboard = () =>{
     return (
     <div>
         <div className= "container">
-         Hello Dashboaard
-            {/* <Sidebar /> */}
 
             {/* Main content of dashboard */}
 

@@ -1,11 +1,13 @@
-// import React from 'react';
+import React from 'react';
 
-// const DashboardHeader = ({title}) =>{
-//     return(
-//         <header>
-//             <h1>{title}</h1>
-//         </header>
-//     );
-// };
+const Header = () => {
+  return (
+    <header>
+      {/* Add your header content here */}
+      <h1>Hospital Management System</h1>
+    </header>
+  );
+}
 
-// export default DashboardHeader;
+export default Header;
+
