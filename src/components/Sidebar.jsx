@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Sidebar.css'; // Import CSS file for styling
 
 const Sidebar = () => {
   return (
-    <aside>
-      {/* Add your sidebar content here */}
+    <aside className="sidebar">
       <nav>
         <ul>
-        <li><Link to="/">Dashboard</Link></li>
+          <li><Link to="/">Dashboard</Link></li>
           <li><Link to="/manageDoctorsPage">Doctors</Link></li>
           <li><Link to="/manageNursesPage">Nurses</Link></li>
           <li><Link to="/manageLaboratoryPage">Laboratory</Link></li>
@@ -20,8 +20,6 @@ const Sidebar = () => {
           <li><Link to="/manageOperationreportsPage">Operation reports</Link></li>
           <li><Link to="/managePaymentsPage">Payments</Link></li>
           <li><Link to="/changeProfilePage">Profile</Link></li>
-          
-          {/* Add more links for other dashboard pages */}
         </ul>
       </nav>
     </aside>
@@ -29,53 +27,3 @@ const Sidebar = () => {
 }
 
 export default Sidebar;
-
-
-
-
-// // src/components/Sidebar.js
-
-// import React from 'react';
-// import styled from 'styled-components';
-
-// const SidebarContainer = styled.div`
-//   width: 250px;
-//   height: 100%;
-//   background-color: #333;
-//   color: white;
-//   padding: 20px;
-// `;
-
-// const SidebarHeader = styled.h2`
-//   font-size: 20px;
-//   margin-bottom: 20px;
-// `;
-
-// const SidebarLink = styled.a`
-//   display: block;
-//   color: white;
-//   text-decoration: none;
-//   margin-bottom: 10px;
-//   font-size: 16px;
-//   transition: 0.3s ease;
-
-//   &:hover {
-//     color: #ffcc00;
-//   }
-// `;
-
-// const Sidebar = () => {
-//   return (
-//     <SidebarContainer>
-//       <SidebarHeader>Hospital Management</SidebarHeader>
-//       <SidebarLink href="#">Dashboard</SidebarLink>
-//       <SidebarLink href="#">Manage Patients</SidebarLink>
-//       <SidebarLink href="#">Manage Doctors</SidebarLink>
-//       <SidebarLink href="#">Manage Nurses</SidebarLink>
-//       <SidebarLink href="#">View Appointments</SidebarLink>
-//       <SidebarLink href="#">Reports</SidebarLink>
-//     </SidebarContainer>
-//   );
-// };
-
-// export default Sidebar;

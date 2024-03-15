@@ -1,0 +1,28 @@
+.sidebar {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar nav ul li a:hover {
+    background-color: #ddd;
+    transform: translateX(5px);
+  }
+  
