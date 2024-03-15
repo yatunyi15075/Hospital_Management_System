@@ -26,6 +26,7 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 `;
 
 const HospitalName = styled.h1`
@@ -50,6 +51,7 @@ const Button = styled.button`
     background-color: #ffd633;
   }
 `;
+
 
 const Header = () => {
   return (
