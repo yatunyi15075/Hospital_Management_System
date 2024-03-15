@@ -29,3 +29,53 @@ const Sidebar = () => {
 }
 
 export default Sidebar;
+
+
+
+
+// // src/components/Sidebar.js
+
+// import React from 'react';
+// import styled from 'styled-components';
+
+// const SidebarContainer = styled.div`
+//   width: 250px;
+//   height: 100%;
+//   background-color: #333;
+//   color: white;
+//   padding: 20px;
+// `;
+
+// const SidebarHeader = styled.h2`
+//   font-size: 20px;
+//   margin-bottom: 20px;
+// `;
+
+// const SidebarLink = styled.a`
+//   display: block;
+//   color: white;
+//   text-decoration: none;
+//   margin-bottom: 10px;
+//   font-size: 16px;
+//   transition: 0.3s ease;
+
+//   &:hover {
+//     color: #ffcc00;
+//   }
+// `;
+
+// const Sidebar = () => {
+//   return (
+//     <SidebarContainer>
+//       <SidebarHeader>Hospital Management</SidebarHeader>
+//       <SidebarLink href="#">Dashboard</SidebarLink>
+//       <SidebarLink href="#">Manage Patients</SidebarLink>
+//       <SidebarLink href="#">Manage Doctors</SidebarLink>
+//       <SidebarLink href="#">Manage Nurses</SidebarLink>
+//       <SidebarLink href="#">View Appointments</SidebarLink>
+//       <SidebarLink href="#">Reports</SidebarLink>
+//     </SidebarContainer>
+//   );
+// };
+
+// export default Sidebar;
