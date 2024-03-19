@@ -1,66 +1,104 @@
-import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
-const ManageDoctorsPage = () =>{
-    //state to store the list of doctors
-    const [doctors, setDoctors] = useState([]);
+const Container = styled.div`
+  padding: 20px;
+`;
 
-    //effect to fetch the list of doctors from the server (replace with actual API call)
-    useEffect(() => {
-        //simulated api call to fetch doctors
-        const fetchDoctors = async () => {
-            try{
-                //replace with your actual api endpoint
-                const response = await fetch('https://you-api-endpoint.com/doctors');
-                if(!respomse.ok){
-                    throw new Error('Failed to fetch doctors');
-                }
-                const data = await response.json();
-                setDoctors(data);
-            } catch(error) {
-                console.error('Error fetching doctors:', error);
-            }
-        };
+const Title = styled.h2`
+  margin-bottom: 20px;
+`;
 
-        fetchDoctors();
-    }, []);
+const DoctorForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin-bottom: 20px;
+`;
 
-    //function to delete a doctor
-    const deleteDoctor = async (id) =>{
-        try{
-            //replace this with your actual api endpoint
-            const respomse = await fetch('https://your-api-endpoint.com/doctors/${id}', {
-                method: 'DELETE',
-            });
-            if (!respomse.ok) {
-                throw new Error('Failed to delete doctor');
-            }
-            //remove the deleted doctor from the list
-            setDoctors(doctors.filter((doctor) => doctor.id !== id));
-        } catch (error){
-            console.error('Error deleting doctor:', error)
-        }
-    };
+const DoctorInput = styled.input`
+  padding: 10px;
+`;
 
-    return(
-        <div>
-            <h2>Manage Doctors</h2>
-            <Link to="/admin/manage-doctors/add">Add Doctor</Link>
-            <ul>
-                {doctors.map((doctor) => (
-                    <li key={doctor.id}>
-                        <div>{doctor.name}</div>
-                        <div>{doctor.specialization}</div>
-                        <div>
-                            <Link to={`/admin/manage-doctors/edit/${doctor.id}`}>Edit</Link>
-                            <button onClick={() => deleteDoctor(doctor.id)}>Delete</button>
-                        </div>
-                    </li>
-                ) )}
-            </ul>
-        </div>
-    )
-    
+const DoctorButton = styled.button`
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+`;
+
+const DoctorList = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+const DoctorListItem = styled.li`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+`;
+
+const ManageDoctorsPage = () => {
+  const [doctors, setDoctors] = useState([]);
+  const [newDoctorName, setNewDoctorName] = useState('');
+  const [newDoctorSpecialization, setNewDoctorSpecialization] = useState('');
+
+  useEffect(() => {
+    // Fetch doctors from API and set the state
+    // Example: fetchDoctors();
+  }, []);
+
+  const handleAddDoctor = () => {
+    // Call API to add doctor with newDoctorName and newDoctorSpecialization
+    // Example: addDoctor(newDoctorName, newDoctorSpecialization);
+    // After successful addition, update doctors state
+    setDoctors([...doctors, { id: doctors.length + 1, name: newDoctorName, specialization: newDoctorSpecialization }]);
+    setNewDoctorName('');
+    setNewDoctorSpecialization('');
+  };
+
+  const handleDeleteDoctor = (id) => {
+    // Call API to delete doctor with id
+    // Example: deleteDoctor(id);
+    // After successful deletion, update doctors state
+    setDoctors(doctors.filter((doctor) => doctor.id !== id));
+  };
+
+  return (
+    <Container>
+      <Title>Manage Doctors</Title>
+      
+      <DoctorForm>
+        <DoctorInput 
+          type="text" 
+          placeholder="Enter doctor name" 
+          value={newDoctorName} 
+          onChange={(e) => setNewDoctorName(e.target.value)} 
+        />
+        <DoctorInput 
+          type="text" 
+          placeholder="Enter doctor specialization" 
+          value={newDoctorSpecialization} 
+          onChange={(e) => setNewDoctorSpecialization(e.target.value)} 
+        />
+        <DoctorButton onClick={handleAddDoctor}>Add Doctor</DoctorButton>
+      </DoctorForm>
+
+      <DoctorList>
+        {doctors.map((doctor) => (
+          <DoctorListItem key={doctor.id}>
+            <span>{doctor.name}</span>
+            <span>{doctor.specialization}</span>
+            <DoctorButton onClick={() => handleDeleteDoctor(doctor.id)}>Delete</DoctorButton>
+          </DoctorListItem>
+        ))}
+      </DoctorList>
+    </Container>
+  );
 };
 
 export default ManageDoctorsPage;
